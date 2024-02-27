@@ -38,9 +38,7 @@ def run(m):
         html_report = os.path.join(RunConfig.NEW_REPORT, "report.html")
         xml_report = os.path.join(RunConfig.NEW_REPORT, "junit-xml.xml")
         pytest.main(["-s", "-v", RunConfig.cases_path,
-                    "--self-contained-html",
                      "--maxfail", RunConfig.max_fail,
-                     "--reruns", RunConfig.rerun,
                      "--html=" + html_report,
                      "--junit-xml=" + xml_report])
         logger.info("运行结束，生成测试报告♥❤！")
