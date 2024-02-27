@@ -40,7 +40,7 @@ def run(m):
         pytest.main(["-s", "-v", RunConfig.cases_path,
                     "--self-contained-html",
                      "--maxfail", RunConfig.max_fail,
-                     "--reruns", RunConfig.rerun
+                     "--reruns", RunConfig.rerun,
                      "--html=" + html_report,
                      "--junit-xml=" + xml_report])
         logger.info("运行结束，生成测试报告♥❤！")
